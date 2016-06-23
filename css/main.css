@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+}
+
+
+.container {
+    width: 700px;
+    margin: 0 auto;
+}
+.divFrame {
+    width: 700px;
+    margin: 20px auto;
+    border: 1px solid #ededed;
+    overflow: hidden;
+}
+.divTitle {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    padding: 0 20px;
+}
+.divContent {
+    /*display: none;*/
+    width: 100%;
+
+}
+.divContent .list {
+    width: 100%;
+    background: lightcoral;
+}
+.divContent .list a {
+    display: block;
+    padding: 15px;
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.divContent .list a:hover {
+    background: #ededed;
+}
+
+
+/* 第二个 */
+.divDefalut {
+    padding: 5px 20px;
+    color: red;
+    background: transparent;
+    border: 1px solid #333333;
+}
+.divClick {
+    background: red;
+    color: #fff;
+}
+

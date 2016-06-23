@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+    <meta charset="UTF-8">
+    <title>jquery</title>
+
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script>
+        $(function () {
+
+//            第一个
+            $('.divTitle').click(function(){
+                var active = $('.divTitle').hasClass('active');
+                if(active) {
+                    $(this).removeClass('active').next('.divContent').hide();
+                }
+                else {
+                    $(this).addClass('active').next('.divContent').show();
+                }
+            });
+
+//            第二个
+
+            $('.divDefalut').click(function () {
+                $('.divDefalut').toggleClass('divClick').html('点击后的样式');
+            });
+
+             // 增加第一个元素的类别
+                $("li:first").addClass("GetFocus");
+
+            // 增加最后一个元素的类别 $("li:last").addClass("GetFocus");
+                $("li:last").addClass("GetFocus");
+
+            // 增加去除所有与给定选择器匹配的元素类别
+                $("li:not(.NotClass)").addClass("GetFocus");
+
+            // 增加所有索引值为偶数的元素类别 , 从 0 开始计数 $("li:even").addClass("GetFocus");
+                $("li:even").addClass("GetFocus");
+
+            // 增加所有索引值为奇数的元素类别 , 从 0 开始计数
+                $("li:odd").addClass("GetFocus");
+
+            // 增加一个给定索引值的元素类别 , 从 0 开始计数 $("li:eq(1)").addClass("GetFocus");
+                $("li:eq(1)").addClass("GetFocus");
+
+            // 增加所有大于给定索引值的元素类别 , 从 0 开始计数
+                $("li:gt(1)").addClass("GetFocus");
+
+            // 增加所有小于给定索引值的元素类别 , 从 0 开始计数 $("li:lt(4)").addClass("GetFocus");
+                $("li:lt(4)").addClass("GetFocus");
+
+        });
+    </script>
+</head>
+<body>
+
+<div class="wrapper">
+
+    <!-- 第一个案例 -->
+    <div class="divFrame">
+        <div class="divTitle">主题</div>
+        <div class="divContent">
+            <div class="list"><a href="#">链接</a></div>
+            <div class="list"><a href="#">链接</a></div>
+            <div class="list"><a href="#">链接</a></div>
+        </div>
+    </div>
+
+    <!-- 第二个案例 -->
+    <div class="container">
+        <button type="button" class="divDefalut">点击前的样式Toggle</button>
+    </div>
+
+</div>
+
+
+</body>
+</html>
